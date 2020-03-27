@@ -17,10 +17,12 @@ Block those fucking spammers!
 
 I will describe how I blocked them in Postfix (yes.. a copy/paste from the above sites :-)
 
-In the following file; /etc/postfix/sender_access -- enter the following:
+- In the following file; /etc/postfix/sender_access -- enter the following:
 `/\.icu$/ 554 Fuck off ICU spammers`
 
-In the following file; /etc/postfix/main.cf -- enter the following:
+- In the following file; /etc/postfix/main.cf -- enter the following:
 `smtpd_sender_restrictions = pcre:/etc/postfix/sender_access`
+
+- Restart/Reload Postfix
 
 If you get a ton of ICU spam, you can report the domains: https://nic.icu/report-abuse/
