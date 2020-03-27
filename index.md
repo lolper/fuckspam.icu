@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+# Fuck Spam -- ICU Domains
 
-You can use the [editor on GitHub](https://github.com/lolper/fuckspam.icu/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### What is the purpose of this site?
+I got tired of getting a ton of spam email from ICU domains. So I decided to bounce those messages with a message to visit this site instead.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Are others impacted by these spammers?
+Yes! A quick search online for "spam email icu domains" will result in a many results of other people running into this problem.
 
-### Markdown
+### So what can I do about it?
+Block those fucking spammers!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## I got my inspiration from other similiar sites
+- https://blocked.icu/
+- https://blog.paranoidpenguin.net/2019/08/icu-tld-i-see-you-spammer/
 
-```markdown
-Syntax highlighted code block
+## So.. how do I block these spammers?
 
-# Header 1
-## Header 2
-### Header 3
+I will describe how I blocked them in Postfix (yes.. a copy/paste from the above sites :-)
 
-- Bulleted
-- List
+In the following file; /etc/postfix/reject_domains -- enter the following:
+`/\.icu$/ REJECT Fuck off ICU spammers`
 
-1. Numbered
-2. List
+In the following file; /etc/postfix/main.cf -- enter the following:
+`smtpd_sender_restrictions = pcre:/etc/postfix/reject_domains`
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lolper/fuckspam.icu/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+If you get a ton of ICU spam, you can report the domains: https://nic.icu/report-abuse/
