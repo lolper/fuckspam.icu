@@ -4,7 +4,7 @@
 I got tired of getting a ton of spam email from ICU domains. So I decided to bounce those messages with a message to visit this site instead.
 
 ### Are others impacted by these spammers?
-Yes! A quick search online for "spam email icu domains" will result in a many results of other people running into this problem.
+Yes! A quick search online for "spam email icu domains" will result in many results of other people running into this problem.
 
 ### So what can I do about it?
 Block those fucking spammers!
